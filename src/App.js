@@ -9,6 +9,7 @@ import Footer from "./components/common/Footer";
 import Home from "./components/home/Home";
 import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
+import Pet from "./components/pets/Pet";
 
 /*
   Data
@@ -35,6 +36,9 @@ function App() {
           />
           <Route path="/staff" element={<StaffList employees={employees} />} />
           <Route path="/pets" element={<PetsList pets={pets} />} />
+          <Route path="/pets/cats" element={<PetsList pets={pets} />} />
+          <Route path="/pets/dogs" element={<PetsList pets={pets} />} />
+          {/* <Route path="/pet/:kind" element={<Pet />} /> */}
         </Routes>
         <Footer />
       </Router>

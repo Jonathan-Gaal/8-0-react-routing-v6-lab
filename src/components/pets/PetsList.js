@@ -1,4 +1,4 @@
-import { useParams, useNavigate, Navigate } from "react-router-dom";
+import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
 import PetsListNav from "./PetsListNav";
 import Pet from "./Pet";
 import "./PetsList.css";
@@ -27,7 +27,9 @@ export const PetsList = ({ pets }) => {
       <section className="pets-list">
         {/* All cats section */}
         {cats.map((cat) => (
-          <Pet key={cat.id} kind="cat" pet={cat} />
+          <Link to="/pets/cats">
+            <Pet key={cat.id} kind="cat" pet={cat} />
+          </Link>
         ))}
 
         {/* All dogs section */}
